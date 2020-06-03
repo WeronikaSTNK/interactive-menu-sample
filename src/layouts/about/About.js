@@ -15,10 +15,9 @@ export const About = () => {
         <h2>
           <p className="introduction">I </p>
           <p className="introduction">am</p>
-          <p className="introduction">almost</p>
           <p className="introduction">a junior</p>
-          <p className="introduction">front-end</p>
-          <p className="introduction">developer.</p>
+          <p className="introduction">front-end</p> <br/>
+          <p className="introduction">developer.</p> <br />
         </h2>
         <h3>
           <p className="introduction">I </p>
@@ -28,7 +27,7 @@ export const About = () => {
           <p className="introduction">get</p>
           <p className="introduction">a job</p>
           <p className="introduction">at</p>
-          <p className="introduction">UNIT9</p>
+          <p className="introduction">UNIT9.</p>
         </h3>
       </section>
     </>
