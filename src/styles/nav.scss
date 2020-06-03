@@ -41,14 +41,15 @@ a {
   border-top: 1px solid rgba(255, 255, 255, 0.507);
 }
 .naviBurgerDot {
-  position: fixed;
-  color: red;
-  top:85vh;
-  cursor: pointer;
-  border: 1px solid red;
-  border-radius: 50%;
-    height: 25px;
-  width: 25px;
+    position: fixed;
+    color: red;
+    top: 81vh;
+    cursor: pointer;
+    border: 1px solid red;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    left: 91vw;
 
 }
 
