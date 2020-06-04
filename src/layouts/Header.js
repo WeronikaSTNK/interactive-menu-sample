@@ -1,6 +1,6 @@
 import React from "react";
-import "../../index.css";
-import Navigation from "../navigation/Navigation";
+import "../index.css";
+import Navigation from "../layouts/Navigation";
 export const Header = ({ logo }) => {
   return (
     <>

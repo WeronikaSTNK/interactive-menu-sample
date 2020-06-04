@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Cursor from "../components/Cursor";
+// import Cursor from "../components/Cursor";
 import "../styles/nav.scss";
 
 export const Menu = () => {
