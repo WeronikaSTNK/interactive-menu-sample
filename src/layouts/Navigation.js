@@ -10,13 +10,12 @@ export const Navigation = ({toggleProjects, openProjects}) => {
       <nav id="navigation">
         <Menu />
         {openProjects ? (
-          <OpenProjects />
+          <OpenProjects openProjects={openProjects} toggleProjects={toggleProjects}/>
         ) : (
           <Projects
             toggleProjects={toggleProjects}
             openProjects={openProjects}
           />
-          // should here be arrow function?
         )}
       </nav>
     </>

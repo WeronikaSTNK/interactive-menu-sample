@@ -27,7 +27,8 @@ export const About = () => {
           <p className="introduction">get</p>
           <p className="introduction">a job</p>
           <p className="introduction">at</p>
-          <p className="introduction">UNIT9.</p>
+          <a className="introduction"href="https://www.unit9.com/">
+     UNIT9.</a>
         </h3>
       </section>
     </>

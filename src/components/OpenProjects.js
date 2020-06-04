@@ -1,6 +1,6 @@
 import React from "react";
 
-export const OpenProjects = ({ open }) => {
+export const OpenProjects = ({ openProjects, toggleProjects }) => {
   const projectsNames = [
     { name: "Project One" },
     { name: "Project Two" },
@@ -13,9 +13,9 @@ export const OpenProjects = ({ open }) => {
 console.log(projectsNames)
   return (
     <>
-      <ul open={open}>
-     {projectsItem}
-      </ul>
+      <section  className={openProjects ? "active" : 'projects'}>
+Test
+      </section>
     </>
   );
 };

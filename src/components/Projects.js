@@ -4,18 +4,18 @@ import {
 BsThreeDotsVertical
 } from "react-icons/bs";
 export const Projects = ({toggleProjects}) => {
-//here we have just component w
+
   return (
     <>
     {/* should i use  different tag here? for example section/fragment */}
-      <div className="allProjects">
+    <div className="projects" onClick={toggleProjects}>
+    <div className="menuProjects">
         Projects
       </div>
        <div className="naviBurgerDot">
-         <button onClick={toggleProjects}>
           <BsThreeDotsVertical  className="threeDots"/>
-          </button>
           </div>
+      </div>
     </>
   )
 }
