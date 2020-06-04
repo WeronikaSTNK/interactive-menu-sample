@@ -3,21 +3,20 @@ import Menu from "../components/Menu";
 import "../styles/nav.scss";
 import { OpenProjects } from "../components/OpenProjects";
 import Projects from "../components/Projects";
-export const Navigation = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+export const Navigation = ({toggleProjects, openProjects}) => {
 
   return (
     <>
       <nav id="navigation">
         <Menu />
-        {openMenu ? (
+        {openProjects ? (
           <OpenProjects />
         ) : (
           <Projects
-            onClick={() => {
-              setOpenMenu(!openMenu);
-            }}
+            toggleProjects={toggleProjects}
+            openProjects={openProjects}
           />
+          // should here be arrow function?
         )}
       </nav>
     </>

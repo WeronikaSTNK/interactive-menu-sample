@@ -1,16 +1,21 @@
-import React, {useState} from 'react'
+import React from 'react'
 import '../styles/nav.scss'
-export const Projects = () => {
-
-  const [openMenu, setOpenMenu] = useState(false);
-
+import {
+BsThreeDotsVertical
+} from "react-icons/bs";
+export const Projects = ({toggleProjects}) => {
+//here we have just component w
   return (
     <>
     {/* should i use  different tag here? for example section/fragment */}
       <div className="allProjects">
         Projects
       </div>
-       <span className="naviBurgerDot"></span>
+       <div className="naviBurgerDot">
+         <button onClick={toggleProjects}>
+          <BsThreeDotsVertical  className="threeDots"/>
+          </button>
+          </div>
     </>
   )
 }

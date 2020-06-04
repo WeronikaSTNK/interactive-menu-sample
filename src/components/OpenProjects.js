@@ -14,7 +14,7 @@ console.log(projectsNames)
   return (
     <>
       <ul open={open}>
-      {projectsItem}
+     {projectsItem}
       </ul>
     </>
   );

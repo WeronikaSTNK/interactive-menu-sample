@@ -1,6 +1,5 @@
 .menu,
-.allProjects,
-.naviBurger {
+.allProjects {
   z-index: 100;
   list-style-type: none;
   position: fixed;
@@ -40,18 +39,36 @@ a {
   transform: scale(1.2);
   border-top: 1px solid rgba(255, 255, 255, 0.507);
 }
+/* reminder for me - remember add constants (colors etc.)*/
 .naviBurgerDot {
     position: fixed;
-    color: red;
     top: 81vh;
     cursor: pointer;
-    border: 1px solid red;
+    border: 1px solid white;
     border-radius: 50%;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     left: 91vw;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      animation: tracking-out-contract 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 7s
+    reverse both;
+    // button{
+    //   display: none
+    // }
 }
+.naviBurgerDot:hover{
+  transform: scale(1.1);
+
+.threeDots{
+transform: rotate(90deg);
+}
+}
+.threeDots{
+color: white
+}
+
 
 @keyframes tracking-out-contract {
   0% {
