@@ -1,5 +1,5 @@
 .menu,
-.menuProjects {
+.menuProjectsButton {
   z-index: 100;
   list-style-type: none;
   position: fixed;
@@ -26,13 +26,13 @@ width: auto;
 }
 a {
   text-decoration: none;
-  color: white;
+  color: var(--mainLightColor);
   padding: 10px;
   font-size: 0.8em;
 }
-.menuProjects {
+.menuProjectsButton {
   top: 70vh;
-  color: white;
+  color: var(--mainLightColor);
   font-size: 0.8em;
 }
 
@@ -48,40 +48,53 @@ a {
     position: fixed;
     top: 81vh;
     cursor: pointer;
-    border: 1px solid white;
+    border: 1px solid var(--mainLightColor);
     border-radius: 50%;
     height: 40px;
     width: 40px;
-    left: 91vw;
+    left: 93vw;
     display: flex;
     justify-content: center;
     align-items: center;
-      animation: tracking-out-contract 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 7s
-    reverse both;
+        transition: .5s ease-in-out;
+z-index: 30000;
+    // animation: tracking-out-contract 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 7s
+    // reverse both;
     button{
 color: transparent;
-background-color: transparent; }
+background-color: transparent;
+}
 }
 .naviBurgerDot:hover{
-
 .threeDots{
 transform: rotate(90deg);
 }
 }
 .threeDots{
-color: white
+color: var(--mainLightColor)
 }
 
 /* after activate*/
 .active {
-  overflow: hidden;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 1000;
-  background-color: red;
+  left: 20em;
+  background-color: darkslategray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.projectsWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectsNames{
+   background-color:red;
+color : var(--mainLightColor);
+}
 @keyframes tracking-out-contract {
   0% {
     opacity: 1;

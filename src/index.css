@@ -6,7 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 600;
-  background-color: rgb(27, 27, 27);
+  background-color: var(--mainDarkColor);
+  overflow: hidden;
+  --mainDarkColor: rgb(31, 31, 31);
+  --mainLightColor: rgb(235, 235, 235);
+
 }
 header {
   position: inherit

@@ -4,7 +4,11 @@ import { NavLink } from "react-router-dom";
 import "../styles/nav.scss";
 
 export const Menu = () => {
+
+  //here we have just menu items without projects section
+
   const [pointerCursor, setPointerCursor] = useState(false);
+
   const navList = [
     { name: "About", path: "/about", exact: true },
     { name: "Work", path: "/work" },
@@ -28,6 +32,7 @@ export const Menu = () => {
     <>
       {/* <Cursor cursorClass={pointerCursor ? "active" : null} /> */}
       <ul className="menu">{menu}</ul>
+
     </>
   );
 };

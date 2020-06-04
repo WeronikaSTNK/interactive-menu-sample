@@ -13,6 +13,7 @@ const [openProjects, setOpenProjects] = useState(false);
 
 const toggleProjects = () => {
   setOpenProjects(!openProjects)
+  document.querySelector('.projects').classList.toggle('active');
 }
   return (
     <>
