@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 600;
   background-color: var(--mainDarkColor);
+  color: var(--mainLightColor);
   overflow: hidden;
   --mainDarkColor: rgb(31, 31, 31);
   --mainLightColor: rgb(235, 235, 235);
@@ -28,6 +29,9 @@ img {
   margin: 15px 50px;
   animation: pop-up 3s forwards;
   position: absolute;
+}
+span {
+  font-size: 12px;
 }
 @keyframes pop-up {
   0% {

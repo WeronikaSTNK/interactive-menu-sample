@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 // import Cursor from "../components/Cursor";
 import "../styles/nav.scss";
 
-export const Menu = () => {
-
+export const Menu = ({ openProjects }) => {
   //here we have just menu items without projects section
 
   const [pointerCursor, setPointerCursor] = useState(false);
@@ -17,7 +16,7 @@ export const Menu = () => {
   ];
 
   const menu = navList.map((item) => (
-    <li key={item.name} className="menuItem" >
+    <li key={item.name} className="menuItem">
       <NavLink
         onMouseEnter={() => setPointerCursor(true)}
         onMouseLeave={() => setPointerCursor(false)}
@@ -31,8 +30,7 @@ export const Menu = () => {
   return (
     <>
       {/* <Cursor cursorClass={pointerCursor ? "active" : null} /> */}
-      <ul className="menu">{menu}</ul>
-
+      {!openProjects ? <ul className="menu">{menu}</ul> : ""}
     </>
   );
 };

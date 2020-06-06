@@ -13,14 +13,14 @@ const [openProjects, setOpenProjects] = useState(false);
 
 const toggleProjects = () => {
   setOpenProjects(!openProjects)
-  document.querySelector('.projects').classList.toggle('active');
+  // document.querySelector('.projects').classList.toggle('active');
 }
   return (
     <>
       <Router>
         <Header logo={logo} />
         <Navigation toggleProjects={toggleProjects} openProjects={openProjects}/>
-        <About />;
+        <About />
       </Router>
     </>
   );

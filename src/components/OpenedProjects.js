@@ -6,6 +6,9 @@ export const OpenedProjects = ({ openProjects, toggleProjects }) => {
     { name: "Project One" },
     { name: "Project Two" },
     { name: "Project Three" },
+        { name: "Project Four" },
+    { name: "Project Three" },
+
   ];
   const projectsItem = projectsNames.map((item) => (
     <li key={item.name}>{item.name}</li>
@@ -13,7 +16,7 @@ export const OpenedProjects = ({ openProjects, toggleProjects }) => {
   return (
 
     <>
-<div className="projectsWrapper">
+<div className="slideOutMenu">
     {openProjects ? <ul className="projectsNames">{projectsItem}</ul> : ""}
 
 </div>

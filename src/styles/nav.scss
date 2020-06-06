@@ -1,5 +1,4 @@
-.menu,
-.menuProjectsButton {
+.menu {
   z-index: 100;
   list-style-type: none;
   position: fixed;
@@ -17,12 +16,33 @@
   -webkit-transform-origin: 0% 0%;
   -o-transform-origin: 0% 0%;
   -ms-transform-origin: 0% 0%;
-  animation: tracking-out-contract 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) 7s
-    reverse both;
+  animation: 1s normal forwards ease-in-out;
+  animation-name: slideout;
 }
+.menuProjectsLabel {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  left: 100%;
+  height: 12vh;
+  top: 71vh;
+  transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+  -webkit-transform: rotateZ(90deg);
+  -o-transform: rotateZ(90deg);
+  -ms-transform: rotateZ(90deg);
+  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  animation: 1s normal forwards ease-in-out;
+  animation-name: slideout;
+}
+
 #navigation {
-height: 15vh;
-width: auto;
+  height: 15vh;
+  width: auto;
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
 }
 a {
   text-decoration: none;
@@ -45,55 +65,96 @@ a {
 }
 /* reminder for me - remember add constants (colors etc.)*/
 .naviBurgerDot {
-    position: fixed;
-    top: 81vh;
-    cursor: pointer;
-    border: 1px solid var(--mainLightColor);
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    left: 93vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-        transition: .5s ease-in-out;
-z-index: 30000;
-    // animation: tracking-out-contract 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 7s
-    // reverse both;
-    button{
-color: transparent;
-background-color: transparent;
+  position: absolute;
+  top: 81vh;
+  cursor: pointer;
+  will-change: transform;
+  border: 1px solid var(--mainLightColor);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  left: 93vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+
+button {
+  color: transparent;
+  background-color: transparent;
+  }
 }
+
+.naviBurgerDot:hover {
+  .threeDots {
+    transform: rotate(90deg);
+  }
 }
-.naviBurgerDot:hover{
-.threeDots{
-transform: rotate(90deg);
+.threeDots {
+  color: var(--mainLightColor);
 }
-}
-.threeDots{
-color: var(--mainLightColor)
+.menuProjectsLabel span:last-child {
+  display: none;
 }
 
 /* after activate*/
 .active {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: 20em;
-  background-color: darkslategray;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: var(--mainDarkColor);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .naviBurgerDot {
+    top: 2em;
+    background-color: white;
+    color: black;
+  }
+  .threeDots {
+    color: black;
+    transform: rotate(90deg);
+  }
+  .threeDots:hover {
+    transform: rotate(0deg);
+  }
+
+  .menu {
+    transition-delay: 0.1s;
+  }
+  .menuProjectsLabel span:last-child {
+    display: flex;
+    top: 9.8vh;
+    left: -29em;
+    position: absolute;
+    transition: transform 800ms cubic-bezier(1, 0, 0.115, 0.995);
+  }
+  .menuProjectsLabel span:first-child {
+    display: none;
+  }
 }
 
-.projectsWrapper{
+.slideOutMenu {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 5vw;
+  transition: transform 250ms ease-in-out;
+  transition: all 0.3s;
+  ul {
+    list-style: none;
+  }
 }
-.projectsNames{
-   background-color:red;
-color : var(--mainLightColor);
+
+.projectsNames {
+  //  background-color:red;
+  color: var(--mainLightColor);
+}
+
+.projectsNames li {
+  transition: all 0.3s;
 }
 @keyframes tracking-out-contract {
   0% {
@@ -115,5 +176,13 @@ color : var(--mainLightColor);
   100% {
     letter-spacing: -0.5em;
     opacity: 0;
+  }
+}
+@keyframes slideout {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
   }
 }
