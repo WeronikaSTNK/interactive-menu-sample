@@ -37,6 +37,7 @@ export const Navigation = ({ toggleProjects, openProjects }) => {
             <BsThreeDotsVertical className="threeDots" />
           </div>
         </div>
+
       </nav>
     </>
   );

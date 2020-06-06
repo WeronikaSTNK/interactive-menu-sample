@@ -22,79 +22,79 @@
   }
 }
 
-// h1 .introduction:nth-child(1) {
-//   animation-delay: 1s;
-//   color: black;
-//   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
-//     1px 1px 0 #fff;
-// }
+h1 .introduction:nth-child(1) {
+  animation-delay: 1s;
+  color: black;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
 
-// h1 .introduction:nth-child(2) {
-//   animation-delay: 2s;
-// }
+h1 .introduction:nth-child(2) {
+  animation-delay: 2s;
+}
 
-// h1 .introduction:nth-child(3) {
-//   animation-delay: 2.3s;
-// }
-// h1 .introduction:nth-child(4) {
-//   animation-delay: 2.6s;
-// }
-// h1 .introduction:nth-child(5) {
-//   animation-delay: 3s;
-// }
+h1 .introduction:nth-child(3) {
+  animation-delay: 2.3s;
+}
+h1 .introduction:nth-child(4) {
+  animation-delay: 2.6s;
+}
+h1 .introduction:nth-child(5) {
+  animation-delay: 3s;
+}
 
-// h2 .introduction:nth-child(1) {
-//   animation-delay: 4.8s;
-// }
-// h2 .introduction:nth-child(2) {
-//   animation-delay: 5s;
-// }
+h2 .introduction:nth-child(1) {
+  animation-delay: 4.8s;
+}
+h2 .introduction:nth-child(2) {
+  animation-delay: 5s;
+}
 
-// h2 .introduction:nth-child(3) {
-//   animation-delay: 5.3s;
-// }
+h2 .introduction:nth-child(3) {
+  animation-delay: 5.3s;
+}
 
-// h2 .introduction:nth-child(4) {
-//   animation-delay: 5.6s;
-// }
-// h2 .introduction:nth-child(5) {
-//   animation-delay: 6s;
-// }
+h2 .introduction:nth-child(4) {
+  animation-delay: 5.6s;
+}
+h2 .introduction:nth-child(5) {
+  animation-delay: 6s;
+}
 
-// h2 .introduction:nth-child(6) {
-//     animation-delay: 6.5s;
-// }
+h2 .introduction:nth-child(6) {
+    animation-delay: 6.5s;
+}
 
-// h3 .introduction:nth-child(1) {
-//   animation-delay: 7s;
-// }
+h3 .introduction:nth-child(1) {
+  animation-delay: 7s;
+}
 
-// h3 .introduction:nth-child(2) {
-//   animation-delay: 8s;
-// }
+h3 .introduction:nth-child(2) {
+  animation-delay: 8s;
+}
 
-// h3 .introduction:nth-child(3) {
-//   animation-delay: 8.3s;
-// }
-// h3 .introduction:nth-child(4) {
-//   animation-delay: 8.6s;
-// }
-// h3 .introduction:nth-child(5) {
-//   animation-delay: 9s;
-// }
-// h3 .introduction:nth-child(6) {
-//   animation-delay: 9.5s;
-// }
-// h3 .introduction:nth-child(7) {
-//   animation-delay: 10s;
+h3 .introduction:nth-child(3) {
+  animation-delay: 8.3s;
+}
+h3 .introduction:nth-child(4) {
+  animation-delay: 8.6s;
+}
+h3 .introduction:nth-child(5) {
+  animation-delay: 9s;
+}
+h3 .introduction:nth-child(6) {
+  animation-delay: 9.5s;
+}
+h3 .introduction:nth-child(7) {
+  animation-delay: 10s;
 
-// }
-// h3 .introduction:nth-child(8)  {
-// animation-delay: 1s;
-// color: black;
-// text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+h3 .introduction:nth-child(8)  {
+animation-delay: 1s;
+color: black;
+text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 
-// }
+}
 
 @keyframes tracking-out-contract {
   0% {
