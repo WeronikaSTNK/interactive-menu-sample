@@ -1,21 +1,11 @@
-import React, { useState } from "react";
-import Menu from "../components/Menu";
 import "../styles/nav.scss";
+
 import { BsThreeDotsVertical } from "react-icons/bs";
+import Menu from "../components/Menu";
 import { OpenedProjects } from "../components/OpenedProjects";
+import React from "react";
 
-export const Navigation = ({ toggleProjects, openProjects }) => {
-  const projectsNames = [
-    { name: "Project One" },
-    { name: "Project Two" },
-    { name: "Project Three" },
-    { name: "Project Four" },
-    { name: "Project Three" },
-  ];
-  const projectsItem = projectsNames.map((item) => (
-    <li key={item.name}>{item.name}</li>
-  ));
-
+export const Navigation = ({ toggleProjects, openProjects, projects }) => {
   return (
     <>
       <nav className="navigation">
@@ -25,19 +15,15 @@ export const Navigation = ({ toggleProjects, openProjects }) => {
             <span>Projects</span>
             <span>Close</span>
           </div>
-          <div className="slideOutMenu">
-            {openProjects ? (
-              <ul className="projectsNames">{projectsItem}</ul>
-            ) : (
-              ""
-            )}
-          </div>
-          {/* <OpenedProjects toggleProjects={toggleProjects} openProjects={openProjects}/> */}
+          <OpenedProjects
+            projects={projects}
+            toggleProjects={toggleProjects}
+            openProjects={openProjects}
+          />
           <div className="naviBurgerDot" onClick={toggleProjects}>
             <BsThreeDotsVertical className="threeDots" />
           </div>
         </div>
-
       </nav>
     </>
   );

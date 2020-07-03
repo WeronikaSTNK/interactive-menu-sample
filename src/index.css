@@ -41,6 +41,12 @@ img {
 span {
   font-size: 12px;
 }
+
+.projectsDescription{
+  font-size: 1em;
+  width: 100px;
+  height: auto;
+}
 @keyframes pop-up {
   0% {
     transform: scale(0) translateY(-10px);
