@@ -153,17 +153,56 @@ a {
   }
 }
 
+.projectsName {
+  .number,
+  .description,
+  #image
+  {
+    display: none;
+  }
+}
 .projectsName:after {
   display: block;
   content: "";
-  border-bottom: solid 3px var(--mainLightColor);
+  border-bottom: solid 5px var(--mainLightColor);
   transform: scaleX(0);
-  transition: transform 400ms ease-in-out;
   transform-origin: 0% 50%;
 }
 .projectsName:hover:after {
   transform: scaleX(1);
 }
+
+.projectsName:hover {
+  cursor: pointer;
+  .number {
+    display: flex;
+    position: absolute;
+    left: 16vw;
+    top: 75vh;
+    font-size: 0.4em;
+  }
+  .description {
+    display: block;
+    width: 5vw;
+    position: absolute;
+    top: 20vh;
+    left: 14vw;
+    font-size: 0.2em;
+white-space: normal;  }
+
+#image {
+    display: block;
+    position: absolute;
+    height: 30vh;
+    width: 20vw;
+    left: 20vw
+}
+#cursor {
+     transition: .6s ease-out;
+    pointer-events: none;
+}
+}
+
 
 @keyframes tracking-out-contract {
   0% {

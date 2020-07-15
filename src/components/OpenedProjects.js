@@ -1,25 +1,37 @@
+import "../styles/nav.scss";
 
-// import styled from "styled-components";
-// const HoverDescription = styled.div`
-//   width: 250px;
-//   height: 500px;
-//   left: 10%;
-//   :hover {
-//     color: #ed1212;
-//   }
-// `;
+import React, {useState} from "react";
 
-import '../styles/nav.scss'
+export const OpenedProjects = ({ projects, openProjects }) => {
+  const [position, setPosition] = useState({ x:0, y:0})
 
-import React from 'react'
-
-export const OpenedProjects = ({projects, openProjects}) => {
-  const projectName = projects.map(i => <li className="projectsName" key = {i.id}>{i.name}</li>
-  )
-  return (
-    <div className="slideOutMenu">
-      {openProjects ? <ul>{projectName}</ul> : ""}
-    </div>
-  )
+const onMouseMove = (e) => {
+  // let image = document.getElementById("image")
+  setPosition({x: e.screenX, y: e.screenY})
 }
- export default OpenedProjects;
+  const projectName = projects.map((i) => (
+    <li className="projectsName" key={i.id}>
+      {i.name}
+      <span className="number">{i.number}</span>
+      <p className="description"> {i.description}</p>
+      <div id="cursor">
+
+      <img id="image" alt = "Project"src={i.url} />
+
+      </div>
+    </li>
+  ));
+
+  return (
+    <>
+      <div className="slideOutMenu" onMouseMove={onMouseMove}>
+        {openProjects && (
+          <div>
+            <ul>{projectName}</ul>
+          </div>
+        )}
+      </div>
+    </>
+  );
+};
+export default OpenedProjects;
