@@ -7,8 +7,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import logo from "./images/logoExample.png";
 import { projects } from "./data";
 
-// reminder for me :) - remember about proptypes in the whole project!
-
 export const App = () => {
 const [openProjects, setOpenProjects] = useState(false);
 
@@ -20,7 +18,7 @@ const toggleProjects = () => {
     <>
       <Router>
         <Header logo={logo} />
-        <Navigation projects = {projects }toggleProjects={toggleProjects} openProjects={openProjects}/>
+        <Navigation projects = {projects} toggleProjects={toggleProjects} openProjects={openProjects}/>
         <About />
       </Router>
     </>

@@ -9,7 +9,7 @@ body {
   background-color: var(--mainDarkColor);
   color: var(--mainLightColor);
   overflow: hidden;
-  --mainDarkColor: rgb(31, 31, 31);
+  --mainDarkColor: rgb(19, 19, 19);
   --mainLightColor: rgb(235, 235, 235);
 
 }
@@ -20,7 +20,6 @@ header {
 header :first-child {
   left: 20%
 }
-
 header :last-child {
   left: 70%
 }
@@ -31,22 +30,18 @@ hr {
   z-index: 10000;
 }
 
-img {
+.logo {
   height: 15vh;
   width: auto;
   margin: 15px 50px;
   animation: pop-up 3s forwards;
   position: absolute;
 }
+
 span {
   font-size: 12px;
 }
 
-.projectsDescription{
-  font-size: 1em;
-  width: 100px;
-  height: auto;
-}
 @keyframes pop-up {
   0% {
     transform: scale(0) translateY(-10px);

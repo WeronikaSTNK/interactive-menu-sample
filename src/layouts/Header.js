@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import React from "react";
-import "../index.css";
+
 export const Header = ({ logo }) => {
   return (
     <>
       <header>
         <hr />
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" className="logo" />
         <hr />
       </header>
     </>
@@ -13,3 +14,7 @@ export const Header = ({ logo }) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  logo: PropTypes.string
+};

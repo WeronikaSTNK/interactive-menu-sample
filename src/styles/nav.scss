@@ -1,5 +1,5 @@
 .menu {
-  z-index: 100;
+  z-index: 1000;
   list-style-type: none;
   position: fixed;
   display: flex;
@@ -24,8 +24,8 @@
   display: flex;
   align-items: flex-end;
   left: 100%;
-  height: 12vh;
-  top: 71vh;
+  height: 13vh;
+  top: 73vh;
   transform: rotateZ(90deg);
   -moz-transform: rotateZ(90deg);
   -webkit-transform: rotateZ(90deg);
@@ -63,9 +63,9 @@ a {
   transform: scale(1.2);
   border-top: 1px solid rgba(255, 255, 255, 0.507);
 }
-/* reminder for me - remember add constants (colors etc.)*/
+
 .naviBurgerDot {
-  position: absolute;
+  position: fixed;
   top: 81vh;
   cursor: pointer;
   will-change: transform;
@@ -130,8 +130,8 @@ a {
   }
   .menuProjectsLabel span:last-child {
     display: flex;
-    top: 9.8vh;
-    left: -29em;
+    top: 11vh;
+    left: -39em;
     position: absolute;
     transition: transform 800ms cubic-bezier(1, 0, 0.115, 0.995);
   }
@@ -147,7 +147,7 @@ a {
   font-size: 5vw;
   transition: transform 250ms ease-in-out;
   transition: all 0.3s;
-
+  z-index: 1000000;
   ul {
     list-style: none;
   }
@@ -156,10 +156,13 @@ a {
 .projectsName {
   .number,
   .description,
-  #image
-  {
+  #image {
     display: none;
+    font-weight: 500;
   }
+}
+.name {
+  z-index: 1000;
 }
 .projectsName:after {
   display: block;
@@ -167,6 +170,7 @@ a {
   border-bottom: solid 5px var(--mainLightColor);
   transform: scaleX(0);
   transform-origin: 0% 50%;
+  transition: transform 400ms ease-in-out;
 }
 .projectsName:hover:after {
   transform: scaleX(1);
@@ -177,7 +181,7 @@ a {
   .number {
     display: flex;
     position: absolute;
-    left: 16vw;
+    left: 17vw;
     top: 75vh;
     font-size: 0.4em;
   }
@@ -188,21 +192,18 @@ a {
     top: 20vh;
     left: 14vw;
     font-size: 0.2em;
-white-space: normal;  }
-
-#image {
+    white-space: normal;
+  }
+  #image {
     display: block;
-    position: absolute;
-    height: 30vh;
-    width: 20vw;
-    left: 20vw
-}
-#cursor {
-     transition: .6s ease-out;
+    position: fixed;
+    height: 20vh;
+    width: auto;
     pointer-events: none;
+    z-index: -100;
+    opacity: 0.8;
+  }
 }
-}
-
 
 @keyframes tracking-out-contract {
   0% {
@@ -261,5 +262,26 @@ white-space: normal;  }
 
   to {
     margin-bottom: 0%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .projectsName {
+    font-size: 0.8em;
+  }
+
+  .naviBurgerDot {
+    left: 84vw;
+    top: 84vh;
+    height: 25px;
+    width: 25px;
+  }
+
+  .menuProjectsLabel span:last-child {
+    top: 10vh;
+    left: -27em;
+  }
+  .description {
+    font-size: 10em;
   }
 }

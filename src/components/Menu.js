@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-// import Cursor from "../components/Cursor";
 import "../styles/nav.scss";
 
+import React, { useState } from "react";
+
+import { NavLink } from "react-router-dom";
+
 export const Menu = ({ openProjects }) => {
-  //here we have just menu items without projects section
 
-  const [pointerCursor, setPointerCursor] = useState(false);
+const [pointerCursor, setPointerCursor] = useState(false);
 
-  const navList = [
+const navList = [
     { name: "About", path: "/about", exact: true },
     { name: "Work", path: "/work" },
     { name: "Skills", path: "/skills" },
@@ -29,8 +29,9 @@ export const Menu = ({ openProjects }) => {
   ));
   return (
     <>
-      {/* <Cursor cursorClass={pointerCursor ? "active" : null} /> */}
-      {!openProjects ? <ul className="menu">{menu}</ul> : ""}
+      {!openProjects &&
+      (<ul className="menu">{menu}</ul>)
+      }
     </>
   );
 };
